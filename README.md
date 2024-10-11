@@ -38,7 +38,7 @@ This section will guide you through setting up the project.
 2. **Extract Bilingual Lexicon**: Create word translation pairs from the MUSE dataset:
 ```python
 bilingual_dict = extract_bilingual_lexicon(muse_dataset)
-Align Embeddings: Perform Procrustes alignment:
+#Align Embeddings: Perform Procrustes alignment:
 aligned_X, W = procrustes_alignment(english_embeddings, hindi_embeddings, bilingual_dict)
 ```
 
