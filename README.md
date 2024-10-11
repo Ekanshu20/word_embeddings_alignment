@@ -60,8 +60,8 @@ for size in [5000, 10000, 20000]:
 
 # Evaluation-metrics
 ```python
-- Precision@1: Proportion of correctly translated words in the top prediction.
-- Precision@5: Proportion of correctly translated words in the top 5 predictions.
+Precision@1: Proportion of correctly translated words in the top prediction.
+Precision@5: Proportion of correctly translated words in the top 5 predictions.
 ```
 
 
