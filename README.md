@@ -24,7 +24,7 @@ This section will guide you through setting up the project.
  
 # Installation
 1. You can download FastText embeddings(English and Hindi) from this site https://fasttext.cc/
-2. Download the bilingual dictionary (English to Hindi) from here https://dl.fbaipublicfiles.com/arrival/dictionaries/en-hi.txt"
+2. Download the bilingual dictionary (English to Hindi) from here https://dl.fbaipublicfiles.com/arrival/dictionaries/en-hi.txt
 
 3. For more information visit this https://github.com/facebookresearch/MUSE
 
