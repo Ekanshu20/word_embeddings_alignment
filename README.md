@@ -1,1 +1,56 @@
-# word_embeddings_alignment
+# Bilingual Word Embedding Alignment
+
+This project implements a bilingual word embedding alignment method using the Procrustes alignment technique. It focuses on aligning English and Hindi word embeddings using a bilingual lexicon, enabling effective translation and semantic similarity evaluation.
+
+## Table of Contents
+- [Getting Started](#getting-started)
+- [Prerequisites](#prerequisites)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Ablation Study](#ablation-study)
+- [Evaluation Metrics](#evaluation-metrics)
+
+## Getting Started
+
+This section will guide you through setting up the project.
+
+### Prerequisites
+
+- Python 3.x
+- Required libraries:
+  - NumPy
+  - SciPy
+  - scikit-learn
+ 
+# Installation
+-You can download FastText embeddings from this site https://fasttext.cc/
+-For more information visit this https://github.com/facebookresearch/MUSE
+
+# Usage
+- Limit Vocabulary: Restrict to the top 100,000 words in each language
+- english_embeddings = limit_vocabulary(english_embeddings, 100000)
+- hindi_embeddings = limit_vocabulary(hindi_embeddings, 100000)
+- Extract Bilingual Lexicon: Create word translation pairs from the MUSE dataset:
+- bilingual_dict = extract_bilingual_lexicon(muse_dataset)
+- Align Embeddings: Perform Procrustes alignment:
+- aligned_X, W = procrustes_alignment(english_embeddings, hindi_embeddings, bilingual_dict)
+- Evaluate Translation: Evaluate translation precision:
+- precision_at_1, precision_at_5 = evaluate_precision(bilingual_dict, english_embeddings, hindi_embeddings, W)
+
+# Ablation study
+- Conduct an ablation study by evaluating different training dictionary sizes (5k, 10k, 20k):
+- for size in [5000, 10000, 20000]:
+    bilingual_lexicon = extract_bilingual_lexicon(bilingual_dict, size)
+    aligned_X, W = procrustes_alignment(english_embeddings, hindi_embeddings, bilingual_lexicon)
+    precision_at_1, precision_at_5 = evaluate_precision(bilingual_lexicon, english_embeddings, hindi_embeddings, W)
+    print(f"Size: {size}, Precision@1: {precision_at_1}, Precision@5: {precision_at_5}")
+
+
+# Evaluation-metrics
+- Precision@1: Proportion of correctly translated words in the top prediction.
+- Precision@5: Proportion of correctly translated words in the top 5 predictions.
+
+
+
+
+
