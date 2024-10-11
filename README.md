@@ -23,8 +23,10 @@ This section will guide you through setting up the project.
   - scikit-learn
  
 # Installation
--You can download FastText embeddings from this site https://fasttext.cc/
--For more information visit this https://github.com/facebookresearch/MUSE
+1. You can download FastText embeddings(English and Hindi) from this site https://fasttext.cc/
+2. Download the bilingual dictionary (English to Hindi) from here https://dl.fbaipublicfiles.com/arrival/dictionaries/en-hi.txt"
+
+3. For more information visit this https://github.com/facebookresearch/MUSE
 
 # Usage
 1.**Limit Vocabulary**: Restrict to the top 100,000 words in each language
