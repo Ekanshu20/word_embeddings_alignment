@@ -64,6 +64,8 @@ Precision@1: Proportion of correctly translated words in the top prediction.
 Precision@5: Proportion of correctly translated words in the top 5 predictions.
 ```
 
+.ipynb file has been attached for further clarification
+
 
 
 
